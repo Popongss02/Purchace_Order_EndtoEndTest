@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20240110 15:49:12.070" rpa="false" schemaversion="4">
+<suite id="s1" name="PurchaseOrder" source="C:\Users\User\PycharmProjects\E-commerce\Scripts\PurchaseOrder.robot">
+<test id="s1-t1" name="TC01_EndtoEnd" line="11">
+<kw name="LaunchedBrowser" library="Generic_Keywords">
+<doc>This keyword is use open url.
+@author:    ECondino    12SEP2023    - initial create</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240110 15:49:12.378" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<status status="PASS" starttime="20240110 15:49:12.378" endtime="20240110 15:49:22.930"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240110 15:49:22.930" endtime="20240110 15:49:23.061"/>
+</kw>
+<status status="PASS" starttime="20240110 15:49:12.377" endtime="20240110 15:49:23.061"/>
+</kw>
+<kw name="CreateUser" library="CreateUser">
+<doc>This keyword is use to create new user.
+@author:    ECondino    12SEP2023    - initial create</doc>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${SignUpRegister_linkLabel}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:23.067" level="INFO">Clicking link '//a[@class='ico-register']'.</msg>
+<status status="PASS" starttime="20240110 15:49:23.061" endtime="20240110 15:49:25.086"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${SignUpRegister_Label}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240110 15:49:25.087" endtime="20240110 15:49:25.126"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${SignUpYourPersonalDetails_Label}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240110 15:49:25.126" endtime="20240110 15:49:25.139"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SignUpMale_RadioButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:25.139" level="INFO">Clicking element '//input[@id='gender-male']'.</msg>
+<status status="PASS" starttime="20240110 15:49:25.139" endtime="20240110 15:49:25.194"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>C:/Users/User/PycharmProjects/Automation1/TC_Pic1.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240110 15:49:25.342" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Automation1/TC_Pic1.png"&gt;&lt;img src="../Automation1/TC_Pic1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240110 15:49:25.194" endtime="20240110 15:49:25.343"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SignUpFirstName_TextField}</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:25.343" level="INFO">Typing text 'Eleupol' into text field '//input[@id='FirstName']'.</msg>
+<status status="PASS" starttime="20240110 15:49:25.343" endtime="20240110 15:49:25.457"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SignUpLastName_TextField}</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:25.458" level="INFO">Typing text 'Condino' into text field '//input[@id='LastName']'.</msg>
+<status status="PASS" starttime="20240110 15:49:25.458" endtime="20240110 15:49:25.576"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${SignUpDateOfBirthDay_ComboBox}</arg>
+<arg>${DOB_day}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20240110 15:49:25.576" level="INFO">Selecting options from selection list '//select[@name='DateOfBirthDay']' by label 13.</msg>
+<status status="PASS" starttime="20240110 15:49:25.576" endtime="20240110 15:49:25.726"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${SignUpDateOfBirthMonth_ComboBox}</arg>
+<arg>${DOB_month}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20240110 15:49:25.727" level="INFO">Selecting options from selection list '//select[@name='DateOfBirthMonth']' by label May.</msg>
+<status status="PASS" starttime="20240110 15:49:25.726" endtime="20240110 15:49:25.831"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${SignUpDateOfBirthYear_ComboBox}</arg>
+<arg>${DOB_year}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20240110 15:49:25.832" level="INFO">Selecting options from selection list '//select[@name='DateOfBirthYear']' by label 1995.</msg>
+<status status="PASS" starttime="20240110 15:49:25.831" endtime="20240110 15:49:25.924"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SignUpEmail_TextField}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:25.925" level="INFO">Typing text 'Pol21@gmail.com' into text field '//input[@id='Email']'.</msg>
+<status status="PASS" starttime="20240110 15:49:25.924" endtime="20240110 15:49:26.041"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SignUpCompany_TextField}</arg>
+<arg>${companyname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:26.041" level="INFO">Typing text 'Acs' into text field '//input[@id='Company']'.</msg>
+<status status="PASS" starttime="20240110 15:49:26.041" endtime="20240110 15:49:26.159"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SignUpPassword_CheckedBox}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:26.159" level="INFO">Typing text 'Popongss02' into text field '//input[@id='Password']'.</msg>
+<status status="PASS" starttime="20240110 15:49:26.159" endtime="20240110 15:49:26.277"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SignUpConfirmPassword_CheckedBox}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:26.279" level="INFO">Typing text 'Popongss02' into text field '//input[@id='ConfirmPassword']'.</msg>
+<status status="PASS" starttime="20240110 15:49:26.279" endtime="20240110 15:49:26.374"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SignUpRegisterbutton_CheckedBox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:26.374" level="INFO">Clicking element '//button[@id='register-button']'.</msg>
+<status status="PASS" starttime="20240110 15:49:26.374" endtime="20240110 15:49:27.897"/>
+</kw>
+<status status="PASS" starttime="20240110 15:49:23.061" endtime="20240110 15:49:27.897"/>
+</kw>
+<kw name="LoginUser" library="LoginUser">
+<doc>This keyword is use to login user.
+@author:    ECondino    12SEP2023    - initial create</doc>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${Login_Link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:27.899" level="INFO">Clicking link '//a[@class='ico-login']'.</msg>
+<status status="PASS" starttime="20240110 15:49:27.899" endtime="20240110 15:49:28.565"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Welcome_Label_Signin}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240110 15:49:28.565" endtime="20240110 15:49:28.596"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${UserName_TextFiel}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:28.598" level="INFO">Typing text 'Pol21@gmail.com' into text field '//input[@id='Email']'.</msg>
+<status status="PASS" starttime="20240110 15:49:28.598" endtime="20240110 15:49:28.698"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Password_TextFiel}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:28.698" level="INFO">Typing text 'Popongss02' into text field '//input[@id='Password']'.</msg>
+<status status="PASS" starttime="20240110 15:49:28.698" endtime="20240110 15:49:28.781"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Login_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:28.781" level="INFO">Clicking element '//button[normalize-space()='Log in']'.</msg>
+<status status="PASS" starttime="20240110 15:49:28.781" endtime="20240110 15:49:30.353"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Welcome_Label_Homepage}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240110 15:49:30.353" endtime="20240110 15:49:30.406"/>
+</kw>
+<status status="PASS" starttime="20240110 15:49:27.898" endtime="20240110 15:49:30.406"/>
+</kw>
+<kw name="Addtocart" library="AddToCart">
+<doc>This keyword is use to add item in cart.
+@author:    ECondino    12SEP2023    - initial create</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CategoriesComputerLabel_Link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:30.408" level="INFO">Clicking element '//ul[@class='top-menu notmobile']//a[normalize-space()='Computers']'.</msg>
+<status status="PASS" starttime="20240110 15:49:30.407" endtime="20240110 15:49:32.405"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${CategoriesComputer_Label}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240110 15:49:32.405" endtime="20240110 15:49:32.417"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CategoriesComputerDesktoplabel_Link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:32.417" level="INFO">Clicking element '//li[@class='inactive']//a[normalize-space()='Desktops']'.</msg>
+<status status="PASS" starttime="20240110 15:49:32.417" endtime="20240110 15:49:34.209"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${CategoriesComputerDesktop_Label}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240110 15:49:34.209" endtime="20240110 15:49:34.220"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CategoriesBuildyourowncomputer_Link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:34.220" level="INFO">Clicking element '//h2[@class='product-title']//a[normalize-space()='Build your own computer']'.</msg>
+<status status="PASS" starttime="20240110 15:49:34.220" endtime="20240110 15:49:35.876"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${CategoriesBuildyourowncomputer_Label}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240110 15:49:35.876" endtime="20240110 15:49:35.895"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${CategoriesComputerProcessor_CheckBox}</arg>
+<arg>${Processor}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20240110 15:49:35.895" level="INFO">Selecting options from selection list '//select[@id='product_attribute_1']' by label 2.2 GHz Intel Pentium Dual-Core E2200.</msg>
+<status status="PASS" starttime="20240110 15:49:35.895" endtime="20240110 15:49:35.992"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${CategoriesComputerRam_CheckBox}</arg>
+<arg>${Ram}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20240110 15:49:35.992" level="INFO">Selecting options from selection list '//select[@id='product_attribute_2']' by label 8GB [+$60.00].</msg>
+<status status="PASS" starttime="20240110 15:49:35.992" endtime="20240110 15:49:36.098"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CategoriesComputerHDD_RadioButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:36.100" level="INFO">Clicking element '//input[@id='product_attribute_3_6']'.</msg>
+<status status="PASS" starttime="20240110 15:49:36.099" endtime="20240110 15:49:36.175"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CategoriesComputerOS_RadioButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:36.176" level="INFO">Clicking element '//input[@id='product_attribute_4_9']'.</msg>
+<status status="PASS" starttime="20240110 15:49:36.175" endtime="20240110 15:49:36.219"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CategoriesComputerSoftware_CheckBox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:36.219" level="INFO">Clicking element '//input[@id='product_attribute_5_11']'.</msg>
+<status status="PASS" starttime="20240110 15:49:36.219" endtime="20240110 15:49:36.286"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>C:/Users/User/PycharmProjects/Automation1/TC_Pic2.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240110 15:49:36.481" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Automation1/TC_Pic2.png"&gt;&lt;img src="../Automation1/TC_Pic2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240110 15:49:36.286" endtime="20240110 15:49:36.481"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CategoriesComputerQuantity_TextField}</arg>
+<arg>${Quantity}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:36.481" level="INFO">Typing text '2' into text field '//input[@id='product_enteredQuantity_1']'.</msg>
+<status status="PASS" starttime="20240110 15:49:36.481" endtime="20240110 15:49:36.605"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CategoriesComputerAddtoCart_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:36.605" level="INFO">Clicking element '//button[@id='add-to-cart-button-1']'.</msg>
+<status status="PASS" starttime="20240110 15:49:36.605" endtime="20240110 15:49:36.665"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${CategoriesComputerAddtoCartSuccessful_Label}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240110 15:49:36.665" endtime="20240110 15:49:37.534"/>
+</kw>
+<status status="PASS" starttime="20240110 15:49:30.407" endtime="20240110 15:49:37.534"/>
+</kw>
+<kw name="LogoutUser" library="LogoutUser">
+<doc>This keyword is use to logout user.
+@author:    ECondino    12SEP2023    - initial create</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollBy(0,330)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240110 15:49:37.536" level="INFO">Executing JavaScript:
+window.scrollBy(0,330)
+Without any arguments.</msg>
+<status status="PASS" starttime="20240110 15:49:37.535" endtime="20240110 15:49:37.556"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${nopCommerce_Icon}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240110 15:49:37.556" endtime="20240110 15:49:37.576"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240110 15:49:42.576" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240110 15:49:37.576" endtime="20240110 15:49:42.576"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Logout_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240110 15:49:42.576" level="INFO">Clicking element '//a[@class='ico-logout']'.</msg>
+<status status="PASS" starttime="20240110 15:49:42.576" endtime="20240110 15:49:43.658"/>
+</kw>
+<status status="PASS" starttime="20240110 15:49:37.535" endtime="20240110 15:49:43.658"/>
+</kw>
+<kw name="CloseBrowser" library="Generic_Keywords">
+<doc>This keyword is use to close browser.
+@author:    ECondino    12SEP2023    - initial create</doc>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20240110 15:49:43.660" endtime="20240110 15:49:49.974"/>
+</kw>
+<status status="PASS" starttime="20240110 15:49:43.659" endtime="20240110 15:49:49.974"/>
+</kw>
+<status status="PASS" starttime="20240110 15:49:12.376" endtime="20240110 15:49:49.977"/>
+</test>
+<status status="PASS" starttime="20240110 15:49:12.070" endtime="20240110 15:49:49.978"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="PurchaseOrder">PurchaseOrder</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240110 15:49:12.332" level="WARN">Imported resource file 'C:\Users\User\PycharmProjects\E-commerce\Config\Import_File_Objects.robot' is empty.</msg>
+</errors>
+</robot>
